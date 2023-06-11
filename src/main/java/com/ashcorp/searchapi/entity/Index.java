@@ -1,46 +1,46 @@
 package com.ashcorp.searchapi.entity;
 
-import java.util.List;
-
 import org.apache.solr.client.solrj.beans.Field;
 
 public class Index {
     /**
-     * Document ID
+     * Document ID.
      */
     private String id;
     /**
-     * Document name
+     * Document name.
      */
     private String name;
 
     /**
-     * Get document ID
+     * Get document ID.
+     * @return Document ID
      */
     public String getId() {
 	    return id;
     }
     /**
-     * Set document ID
-     * @param id Document ID
+     * Set document ID.
+     * @param docId Document ID
      */
     @Field
-    public void setId(String id) {
-        this.id = id;
+    public void setId(final String docId) {
+        this.id = docId;
     }
     /**
-     * Get document name
+     * Get document name.
+     * @return Name field value
      */
     public String getName() {
         return name;
     }
     /**
-     * Set document name
-     * @param name Document name field
+     * Set document name.
+     * @param nameField Document name field
      */
     @Field
-    public void setName(String name) {
-        this.name = name;
+    public void setName(final String nameField) {
+        this.name = nameField;
     }
 
 }
