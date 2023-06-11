@@ -5,6 +5,7 @@ mvnw*
 !**/src/main/**/target/
 !**/src/test/**/target/
 .metadata
+.DS_Store
 
 ### STS ###
 .apt_generated
