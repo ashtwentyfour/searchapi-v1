@@ -32,15 +32,36 @@ import com.ashcorp.searchapi.entity.Result;
 @RequestMapping(path = "/search") // path
 public class MainController {
 
+    /**
+     * Logger declaration.
+     */
     private Logger logger
         = LoggerFactory.getLogger(MainController.class);
 
+    /**
+     * Solr result object
+     */
     @Autowired
     Result solrResult;
 
+    /**
+     * Solr cluster hostname
+     */
     @Value("${spring.solr.host}")
     private String solrHost;
 
+    /**
+     * Fetch query results from Solr
+     * @param field Query field
+     * @param value Query field value
+     * @param start Start row
+     * @param stop Stop row
+     * @param tag Sort field
+     * @param order Sort order
+     * @param facetField Facet field
+     * @param facetQuery Facet query
+     * @param core Solr core
+     */
     @GetMapping(value="/query/{core}")
     public ResponseEntity<Result> search(
             @RequestParam String field, 
