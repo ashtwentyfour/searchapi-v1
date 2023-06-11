@@ -107,7 +107,7 @@ public class MainController {
         SolrDocumentList numdocs = response.getResults();
         response.getDebugMap();
         long count = numdocs.getNumFound();
-        logger.info(Long.toString(count) + " results not found for "
+        logger.info(Long.toString(count) + " results found for "
                     + field + ":" + value + " in core " + core);
         solrResult.setCount(count);
         solrResult.setIndex(docs);
