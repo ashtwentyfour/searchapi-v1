@@ -26,6 +26,11 @@ public class Result {
     private Map<String, Long> facetField;
 
     /**
+     * All fields and values.
+     */
+    private List<Map<String, String>> valuesDump;
+
+    /**
      * Get result count.
      * @return Result count
      */
@@ -81,4 +86,19 @@ public class Result {
     public void setFacetField(final Map<String, Long> facetFieldMapping) {
         this.facetField = facetFieldMapping;
     }
+    /**
+     * Get all fields and values.
+     * @return All fields and values
+     */
+    public List<Map<String, String>> getValuesDump() {
+        return valuesDump;
+    }
+    /**
+     * Set values dump.
+     * @param valuesDumpMap Field to value mapping
+     */
+    public void setValuesDump(final List<Map<String, String>> valuesDumpMap) {
+        this.valuesDump = valuesDumpMap;
+    }
+
 }
