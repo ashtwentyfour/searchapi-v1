@@ -7,6 +7,7 @@ mvnw*
 .metadata
 .DS_Store
 *.jar
+solr/security.json
 
 ### STS ###
 .apt_generated
